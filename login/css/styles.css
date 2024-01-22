@@ -1,0 +1,98 @@
+:root{
+    --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+    --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;/*tamaño de la caja*/
+}
+
+body{
+    font-family: var(--font-mono);
+}
+
+section{
+    display:flex;
+    flex-wrap: wrap;/* especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas*/
+    height: 100vh;
+    align-items: center;
+    justify-content: center;/*define cómo el navegador distribuye el espacio entre y alrededor de los elementos flex, a lo largo del eje principal de su contenedor.*/
+    flex-direction: column;/* determina la dirección en que se ordenarán los elementos en el espacio. Esto puede ser de izquierda a derecha (row), de derecha a izquierda (row-reverse), de arriba a abajo (column) o de abajo a arriba (column-reverse) ( flex-flow flex-direction ).*/
+    padding: 1em;/*establece el área de relleno arriba | derecha | abajo | izquierda*/
+}
+
+section h1{
+    font-size: 3em;
+}
+
+section h2{
+    text-align:center;
+    width: 100%;
+    margin-bottom: 1em;/*( margen-inferior ) es la propiedad de un elemento que establece el espacio requerido en la parte inferior de un elemento*/
+    font-size: 2.5em
+}
+
+section form{
+    padding: 1.5em;/*establece el área de relleno arriba | derecha | abajo | izquierda*/
+    display:flex;
+    flex-wrap: wrap;/*especifica si los elementos "hijos" están obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.*/
+    max-width: 500px;/* is used to define the maximum width of an element*/
+    border-radius: 20px;
+    border: 2px solid rgba(0,0,0,.1);
+}
+
+section form label{
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 0.5em;/*es la propiedad de un elemento que establece el espacio requerido en la parte inferior de un elemento*/
+}
+
+section form input{
+    width: 100%;
+    margin-bottom: 1em;/*es la propiedad de un elemento que establece el espacio requerido en la parte inferior de un elemento*/
+    padding: 0.8em;/*arriba y abajo | izquierda y derecha*/
+    border-radius: 9px;
+    border: none;
+    outline-color: #003DFF;/*es una forma reducida para establecer una o más de las propiedades individuales de contorno outline-style , outline-width y outline-color en una sola declaración*/
+    background-color: #eee;
+}
+
+section form input[type='submit']{
+    margin-top: 1.5em;/*establece el margen superior de un elemento especificando una longitud o un porcentaje. Los valores en porcentaje se refieren al ancho del elemento padre.*/
+    background-color: #003DFF;
+    color: #fff;
+    font-family: var(--font-mono);
+    transition: var(--transition);
+} 
+
+section form input[type='submit']:active{
+    transform: scale(0.97);
+}
+
+section p{
+    margin-top: 1.5em;/*establece el margen superior de un elemento especificando una longitud o un porcentaje. Los valores en porcentaje se refieren al ancho del elemento padre.*/
+}
+
+section p a{
+    text-decoration: none;
+    color: #003DFF;
+}
+
+
+/* Home */
+
+section button{
+    background-color: #003DFF;
+    color: #fff;
+    font-family: var(--font-mono);
+    transition: var(--transition);
+    border: none;
+    padding: 0.5em 1em;/* arriba y abajo | izquierda y derecha */
+    border-radius: 9px;
+    margin-top: 1.5em;
+    font-size: 1em;
+}
